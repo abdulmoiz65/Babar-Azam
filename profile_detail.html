@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile detail</title>
+      <!-- bootstrap css cdn  -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap javascript cdn  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+  <link rel="stylesheet" href="./detail.css">
+  <!-- font awesome cdn  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="./Snippet.js"></script>
+
+</head>
+<body>
+    
+  <!-- NAVBAR START   -->
+  <header id="mynav">
+    
+  </header>
+  <!-- NAVBAR END  -->
+
+
+
+  <main class="container mt-4 talent">
+    <div class="parallax-container">
+        <img id="Parallax-Image" src="./Assets/babarAzam2.jpg" alt="Babar Azam Image" class="parallax-bg img-fluid consistent-size">
+        <div class="row justify-content-lg-center parallax-content"> 
+            <div class="col-lg-6 justify-content-sm-evenly">
+                <img id="productImage" src="Assets/babarwith1.jpg" alt="Babar Azam Image" class="img-fluid consistent-size">            
+                <i onclick="changeImage(1)" class="fa fa-angle-left" aria-hidden="true"></i>
+                <i onclick="changeImage(-1)" class="fa fa-angle-right" aria-hidden="true"></i>
+                <h1 class="he1 mt-2">BABAR AZAM</h1>
+                <h1 class="he2">CRICKET PLAYER</h1>
+            </div>
+            <div class="col col-sm-4">
+                <h2>Cricket</h2>
+                <p>Price: $99.99</p>
+                <div class="description">
+                    <h3>Cricket</h3>
+                    <p>Babar Azam, one of the finest cricketers, is known for his elegant stroke play and consistency across all formats of the game. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+    var currentImageIndex = 1;
+    var maxImages = 3; 
+
+    function changeImage(direction) {
+        currentImageIndex += direction;
+
+        if (currentImageIndex < 1) {
+            currentImageIndex = maxImages;
+        } else if (currentImageIndex > maxImages) {
+            currentImageIndex = 1;
+        }
+
+        var imagePath = "Assets/person" + currentImageIndex + ".png";
+        document.getElementById("productImage").src = imagePath;
+    }
+</script>
+
+
+
+
+    
+</body>
+</html>
